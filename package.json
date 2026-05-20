@@ -39,13 +39,13 @@
     "prepublishOnly": "pnpm test && pnpm build"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.17.4",
-    "zod": "^4.1.11"
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@types/node": "^24.5.2",
-    "tsx": "^4.20.5",
-    "typescript": "^5.9.2"
+    "@types/node": "^24.12.4",
+    "tsx": "^4.22.3",
+    "typescript": "^5.9.3"
   },
   "packageManager": "pnpm@10.30.0"
 }
