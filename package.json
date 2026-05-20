@@ -1,0 +1,50 @@
+{
+  "name": "dtrack-mcp",
+  "version": "0.1.0",
+  "description": "Model Context Protocol server for OWASP Dependency-Track.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "dependency-track",
+    "owasp",
+    "sbom",
+    "vulnerability"
+  ],
+  "homepage": "https://github.com/msiemens/dtrack-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/msiemens/dtrack-mcp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msiemens/dtrack-mcp.git"
+  },
+  "license": "MIT",
+  "author": "Markus Siemens <markus@m-siemens.de>",
+  "type": "module",
+  "bin": {
+    "dtrack-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node -e \"import('node:fs').then((fs) => fs.rmSync('dist', { recursive: true, force: true }))\" && tsc -p tsconfig.json",
+    "test": "node --test --import tsx test/**/*.test.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.4",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  },
+  "packageManager": "pnpm@10.30.0"
+}
